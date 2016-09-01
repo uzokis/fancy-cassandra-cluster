@@ -15,7 +15,7 @@
 1. Install [Vagrant](https://www.vagrantup.com/) & [VirtualBox](https://www.virtualbox.org/) on your host system. 
 2. Checkout this repository.
 3. Run `vagrant up` in the root folder. Vagrant & puppet will now automatically provision the guest system and when the process is finished you'll have your cassandra cluster up & running.
-4. Use ssh/putty to logon via the forwarded port to the guest (credentials are vagrant/vagrant), alternatively you can use `vagrant ssh` if your host has an ssh client setup.
+4. Use ssh/putty to logon via the forwarded port to the guest (credentials are vagrant/vagrant), alternatively you can use `vagrant ssh` if your host has an ssh client on the path.
 5. Cassandra authentication is disabled so you can logon with any credentials to the system keyspace from the host (eg. with [DBeaver](http://dbeaver.jkiss.org/)), these are the default interfaces which should be available:
     * Node1: 10.99.88.11:9042
 	* Node2: 10.99.88.12:9042
@@ -31,13 +31,13 @@ If you're not happy with the standard behavior feel free to adapt the scripts, h
 * `puppet/manifests/cassandra/templates/` this folder contains generic cassandra config file templates & a systemd template
 
 ### Useful commands ###
-#### Cassandra & CentOS ####
+#### Cassandra & CentOS (in the guest) ####
 * `systemctl stop cassandra-node1` - Stop a node
 * `systemctl start cassandra-node2` - Start a node
 * `systemctl status cassandra-node2` - Check the process status of a node
 * `/opt/cassandra/node1/bin/nodetool status` - Check the status of the cluster
 
-#### Vagrant ####
+#### Vagrant (in the host) ####
 * `vagrant up` - Bring the guest system up, provision if non-existant
 * `vagrant provision` - run the provisioning (will trigger a puppet run)
 * `vagrant reload` - restart the guest
