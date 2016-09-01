@@ -2,11 +2,11 @@
 
 * This repository contains a vagrantfile & puppet manifests to quickly setup a cassandra cluster for development or experimentation.
 + It's been tested with 
-    * Cassandra 3.0.8
-	* CentOS 7
-	* Vagrant 1.7.4
-	* Puppet 3.8.7
-    * VirtualBox 5.0.26
+    * [Cassandra 3.0.8](http://cassandra.apache.org/)
+	* [CentOS 7](https://www.centos.org/)
+	* [Vagrant 1.7.4](https://www.vagrantup.com/)
+	* [Puppet 3.8.7](https://puppet.com/)
+    * [VirtualBox 5.0.26](https://www.virtualbox.org/)
     * Windows 8 (as host)
 * Without changes this project will spawn a single guest running 3 cassandra nodes in 1 cluster, which should be reachable from the host. The cluster contains no data.
 
@@ -14,7 +14,7 @@
 
 1. Install [Vagrant](https://www.vagrantup.com/) & [VirtualBox](https://www.virtualbox.org/) on your host system. 
 2. Checkout this repository.
-3. Run `vagrant up` in the root folder.
+3. Run `vagrant up` in the root folder. Vagrant & puppet will now automatically provision the guest system and when the process is finished you'll have your cassandra cluster up & running.
 4. Use ssh/putty to logon via the forwarded port to the guest (credentials are vagrant/vagrant), alternatively you can use `vagrant ssh` if your host has an ssh client setup.
 5. Cassandra authentication is disabled so you can logon with any credentials to the system keyspace from the host (eg. with [DBeaver](http://dbeaver.jkiss.org/)), these are the default interfaces which should be available:
     * Node1: 10.99.88.11:9042
