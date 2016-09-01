@@ -5,7 +5,7 @@
     * [Cassandra 3.0.8](http://cassandra.apache.org/)
 	* [CentOS 7](https://www.centos.org/)
 	* [Vagrant 1.7.4](https://www.vagrantup.com/)
-	* [Puppet 3.8.7](https://puppet.com/)
+	* [Puppet 3.8.7](https://puppet.com/) (masterless)
     * [VirtualBox 5.0.26](https://www.virtualbox.org/)
     * Windows 8 (as host)
 * Without changes this project will spawn a single guest running 3 cassandra nodes in 1 cluster, which should be reachable from the host. The cluster contains no data.
@@ -38,7 +38,7 @@ If you're not happy with the standard behavior feel free to adapt the scripts, h
 * `/opt/cassandra/node1/bin/nodetool status` - Check the status of the cluster
 
 #### Vagrant (in the host) ####
-* `vagrant up` - Bring the guest system up, provision if non-existant
+* `vagrant up` - Bring the guest system up, provision if non-existent
 * `vagrant provision` - run the provisioning (will trigger a puppet run)
 * `vagrant reload` - restart the guest
 
