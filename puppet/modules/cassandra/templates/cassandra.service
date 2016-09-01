@@ -1,0 +1,20 @@
+[Unit]
+Description=Cassandra <%= @node %> @ <%= @cluster_name %>
+
+# When using network.target the process sometimes isn't able to bind to a port
+# Using network-online.target seems to be slower but reliable in this case
+# See https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/
+After=network-online.target
+
+[Service]
+Type=forking
+PIDFile=/opt/cassandra/<%= @node %>/cassandra.pid
+User=<%= @user %>
+Group=users
+ExecStart=/opt/cassandra/<%= @node %>/bin/cassandra -p /opt/cassandra/<%= @node %>/cassandra.pid
+StandardOutput=journal
+StandardError=journal
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
