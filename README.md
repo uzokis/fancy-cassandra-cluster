@@ -24,6 +24,7 @@
 ### What to configure where? ###
 
 If you're not happy with the standard behavior feel free to adapt the scripts, here are some guidelines:
+
 * Change guest properties such as available memory, network interfaces,... in `Vagrantfile`
 * `puppet/manifests/default.pp` is the starting point for the puppet agent, it installs/prepares prerequisites for the cassandra installation (java, downloads the cassandra binary, defines 3 nodes) and defines configuration used in the cassandra_node module (ip, ports)
 * `puppet/modules/cassandra/manifests/cassandra_node.pp` actually installs a node and enables & starts it as a service (using systemd)
