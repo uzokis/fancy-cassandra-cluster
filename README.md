@@ -13,7 +13,7 @@
 ### How do I get set up? ###
 
 1. Install [Vagrant](https://www.vagrantup.com/) & [VirtualBox](https://www.virtualbox.org/) on your host system. 
-2. Checkout this repository.
+2. Clone this repository to a local directory.
 3. Run `vagrant up` in the root folder. Vagrant & puppet will now automatically provision the guest system and when the process is finished you'll have your cassandra cluster up & running.
 4. Use ssh/putty to logon via the forwarded port to the guest (credentials are vagrant/vagrant), alternatively you can use `vagrant ssh` if your host has an ssh client on the path.
 5. Cassandra authentication is disabled so you can logon with any credentials to the system keyspace from the host (eg. with [DBeaver](http://dbeaver.jkiss.org/)), these are the default interfaces which should be available:
