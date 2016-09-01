@@ -43,4 +43,4 @@ If you're not happy with the standard behavior feel free to adapt the scripts, h
 
 ### Who do I talk to? ###
 
-* Follow me on twitter: [@vanfraeyenhove](https://twitter.com/vanfraeyenhove)
+* You can find me on twitter: [@vanfraeyenhove](https://twitter.com/vanfraeyenhove)
