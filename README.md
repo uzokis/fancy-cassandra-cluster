@@ -43,7 +43,7 @@ If you're not happy with the standard behavior feel free to adapt the scripts, h
 * `vagrant reload` - restart the guest
 
 ### On the TODO list ###
-* Spawn a hardened, production-ready cluster http://thelastpickle.com/blog/2015/09/30/hardening-cassandra-step-by-step-part-1-server-to-server.html
+* Spawn a hardened, production-ready cluster: http://thelastpickle.com/blog/2015/09/30/hardening-cassandra-step-by-step-part-1-server-to-server.html
 * Create some alternative Vagrantfiles & puppet manifests to spawn multi-machine clusters
 * Test more versions and rename the templates to version specific config files
 
